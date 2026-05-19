@@ -1,0 +1,5 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><title>말대말 관제</title><style>body{margin:0;font-family:system-ui;background:#0f172a;color:#fff}main{padding:24px;max-width:1080px;margin:0 auto}.card{background:#111827;border:1px solid #334155;border-radius:18px;padding:18px;margin:12px 0}a{color:#93c5fd}pre{background:#020617;border-radius:12px;padding:14px;white-space:pre-wrap;max-height:500px;overflow:auto}button{border:0;border-radius:12px;padding:12px 16px;font-weight:900}</style></head><body><main><h1>말대말 관제 / 임시 KRXAI</h1><div class="card"><pre>/        = 말대말 사용자 UI
+/dev     = 개발자 UI
+/krxa    = 말대말 관제
+/api/ai  = 임시 KRXAI
+/api/ai/memory = 기억 로그</pre><p><a href="/">사용자 UI</a> · <a href="/dev">Developer UI</a> · <a href="/api/ai/memory">AI Memory</a></p></div><div class="card"><button onclick="loadLog()">로그 새로고침</button><pre id="out">대기 중</pre></div></main><script>async function loadLog(){let r=await fetch('/api/krxa/log');out.textContent=JSON.stringify(await r.json(),null,2)}loadLog()</script></body></html>

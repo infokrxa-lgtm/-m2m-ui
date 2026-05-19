@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: m2m-render-api-ai-v06
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: HTTPS_FIRST
+        value: true
+      - key: KRXAI_MODE
+        value: local_temp
